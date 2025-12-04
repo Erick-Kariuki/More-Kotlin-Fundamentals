@@ -1,4 +1,4 @@
-
+package Collections_in_Kotlin
 //Arrays store ordered data of the same type, and have a fixed size.
 
 fun main(args: Array<String>) {

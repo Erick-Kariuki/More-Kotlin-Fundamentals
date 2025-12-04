@@ -1,4 +1,4 @@
-
+package Collections_in_Kotlin
 //A list is an ordered, resizable collection, typically implemented as a resizable array.
 // When the array is filled to capacity, and you try to insert a new element,
 // the array is copied to a new bigger array.

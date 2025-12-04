@@ -1,3 +1,6 @@
+package Collections_in_Kotlin
+
+import kotlin.collections.iterator
 
 // A Map is a collection consisting of keys and values.
 // It's called a map because unique keys are mapped to other values.

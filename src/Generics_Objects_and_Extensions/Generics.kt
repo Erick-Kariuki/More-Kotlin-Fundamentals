@@ -34,11 +34,26 @@ enum class Difficulty{
     EASY, MEDIUM, HARD
 }
 
+//Extend the Quiz class with an extension property
+    //val Quiz.StudentProgress.progressText:String
+    //    get() = "$answered of $total answered"
+
+//Extend the Quiz class with an extension function
+    //fun Quiz.StudentProgress.printProgressBar(){
+    //    repeat(Quiz.answered){print("▓")}
+    //    repeat((Quiz.total-Quiz.answered)){print("▒")}
+    //    println()
+    //    println(Quiz.progressText)
+    //}
+
+
+//Rewrite extension properties and functions using interfaces
 interface ProgressPrintable {
     val progressText: String
     fun printProgressBar()
 }
 
+//The Quiz class must now extend the interface containing extension property and function
 class Quiz() : ProgressPrintable{
     override val progressText : String
         get() = "$answered of $total answered."
@@ -53,6 +68,7 @@ class Quiz() : ProgressPrintable{
     val question2 = Question<Boolean>("The sky is green. True or false", false, Difficulty.EASY)
     val question3 = Question<Int>("How many days are there between full moons?", 28, Difficulty.HARD)
 
+    //Use a singleton object
     companion object StudentProgress{
         var total = 10
         var answered = 3
@@ -80,15 +96,7 @@ class Quiz() : ProgressPrintable{
     }
 }
 
-//val Quiz.StudentProgress.progressText:String
-//    get() = "$answered of $total answered"
 
-//fun Quiz.StudentProgress.printProgressBar(){
-//    repeat(Quiz.answered){print("▓")}
-//    repeat((Quiz.total-Quiz.answered)){print("▒")}
-//    println()
-//    println(Quiz.progressText)
-//}
 
 
 class Recipe():ProgressPrintable{
